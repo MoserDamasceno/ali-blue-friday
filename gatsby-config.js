@@ -44,7 +44,7 @@ require("dotenv").config({
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/favicon.png`, 
+        icon: `static/favicon.ico`, 
       },
     },
   ],
