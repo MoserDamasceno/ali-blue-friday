@@ -120,7 +120,7 @@ body{
   .content-banner{
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: flex-end;
 
       h1{
           font-size: 36px;
