@@ -94,15 +94,15 @@ body{
   min-height: 100vh;
   padding: 30px 0;
   
-  @include small-only(){
-    background-image: url('../images/bg-brick.png');
+  @include medium-down(){
+    background-image: url('../images/bg-brick-mobile.jpg');
     padding: 80px 0;
   }
 
   .grid{
      grid-template-columns: 2fr 1fr; 
 
-     @include small-only(){
+     @include medium-down(){
       grid-template-columns: 1fr;
     }
   }
@@ -111,7 +111,7 @@ body{
     display: none;
     margin-bottom: 50px;
     
-    @include small-only(){
+    @include medium-down(){
       display: block;
     }
     
@@ -190,6 +190,10 @@ body{
   color: $white;
   min-height: 100vh;
   padding: 50px 0;
+  
+  @include medium-down(){
+    background-image: url('../images/bg-dinheiro-na-conta-mobile.jpg');
+  }
 
   h2{
       font-size: 36px;
@@ -207,7 +211,7 @@ body{
           grid-template-columns: 160px 1fr;
           align-items: center;
           
-          @include small-only(){
+          @include medium-down(){
             grid-template-columns: 120px 1fr;
             
           }
@@ -221,9 +225,11 @@ body{
                   line-height: 1;
                   margin-bottom: 10px;
                   
-                  @include small-only(){
+                  @include medium-down(){
                     font-size: 24px;
                   }
+
+                  
               }
       
               p{
@@ -231,6 +237,12 @@ body{
 
                   b{
                       font-weight: 900;
+                  }
+
+                  @include medium-down(){
+                    br{
+                      display: none;
+                    }
                   }
       
               }
@@ -318,11 +330,19 @@ body{
     
         
       }
+
+      @include medium-only(){
+        font-size: 26px;
+      }
   }
 
   .grid-3{
       gap: 60px;
       margin-bottom: 60px;
+      
+      @include medium-only(){
+        gap: 20px;
+      }
 
       .box-preco{
           background-color: $blue;
@@ -337,6 +357,10 @@ body{
 
               @include small-only(){        
                 font-size: 40px;
+              }
+              
+              @include medium-only(){
+                font-size: 20px;
               }
           }
 
@@ -358,15 +382,23 @@ body{
               @include small-only(){        
                 font-size: 50px;
               }
+
+              @include medium-only(){
+                font-size: 20px;
+              }
               
               &:last-child{
                   font-size: 50px;
-
+                  @include medium-only(){
+                    font-size: 20px;
+                  }
                   
                   span{
                       font-size: 72px;
 
-                      
+                      @include medium-only(){
+                        font-size: 20px;
+                      }
                   }
 
               }
@@ -374,6 +406,10 @@ body{
 
           .textinho{
               font-size: 30px;
+
+              @include medium-only(){
+                font-size: 20px;
+              }
           }
 
       }
